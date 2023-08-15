@@ -1,3 +1,5 @@
+(This is a fork of [malexer/twemproxy](https://github.com/malexer/docker-twemproxy) which includes support for `redis_auth` being passed as an environment variable)
+
 [![](https://images.microbadger.com/badges/image/malexer/twemproxy.svg)](https://microbadger.com/images/malexer/twemproxy "Get your own image badge on microbadger.com")
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmalexer%2Fdocker-twemproxy.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmalexer%2Fdocker-twemproxy?ref=badge_shield)
 
