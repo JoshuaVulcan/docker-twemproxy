@@ -34,7 +34,8 @@ i.e. if you want to redirect to three Redis instances, create this custom Docker
 ```dockerfile
 FROM malexer/twemproxy:latest
 
-ENV REDIS_SERVERS 127.0.1.1:6379:1,127.0.1.2:6379:1,127.0.1.3:6379:1
+ENV REDIS_SERVERS"127.0.1.1:6379:1,127.0.1.2:6379:1,127.0.1.3:6379:1" \
+REDIS_AUTH="my-redis-auth-string"
 ```
 
 This will generate default Twemproxy config on container start:
@@ -45,6 +46,7 @@ pool:
     hash: fnv1a_64
     distribution: ketama
     redis: true
+    redis_auth: "my-redis-auth-string"
     auto_eject_hosts: true
     timeout: 2000
     server_retry_timeout: 5000
@@ -75,6 +77,7 @@ pool:
     hash: fnv1a_64
     distribution: ketama
     redis: true
+    redis_auth: ""
     auto_eject_hosts: ${AUTO_EJECT_HOSTS}
     timeout: ${TIMEOUT}
     server_retry_timeout: ${SERVER_RETRY_TIMEOUT}
